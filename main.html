@@ -1,0 +1,17 @@
+<head>
+</head>
+
+<body>
+    <h2>Infinite loop when manipulating large DOM set</h2>
+    <p>
+        <button id="v1">Publish v1</button>
+        <button id="v2">Publish v2</button>
+    </p>
+    <p>myCollection:</p>
+    <p>
+        {{#each getValues}}
+            <!-- You can remove the line below, the issue is still there! -->
+            <div>{{v1}}, {{v2}}</div>
+        {{/each}}
+    </p>
+</body>
